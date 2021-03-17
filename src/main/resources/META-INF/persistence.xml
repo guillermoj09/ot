@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+<persistence-unit name="gpsf">
+	<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>model.UsuariosTran</class>
+		<class>model.UsuariosTranPK</class>
+		<class>model.Cliente</class>
+		<class>model.TipoVehiculo</class>
+		<class>model.Device_Tipogp</class>
+		<class>model.Device</class>
+		<class>model.Alarmas_Semanal_Velocidad</class>
+		<class>model.Faenas</class>
+		<class>model.Instaladores_Device</class>
+		<class>model.TblValidacione</class>
+		<class>model.PasoUsuario</class>
+		<class>model.MM_Faena_Vehiculo</class>
+		<class>model.PasoFaena</class>
+		<class>model.PasoFaenaPK</class>
+		<class>model.TblInstaladore</class>
+
+	
+
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+		<properties>
+		<property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://192.168.1.7:1433;databaseName=BaseGPSF"/>
+        <property name="javax.persistence.jdbc.user" value="usuWEb2s"/>
+        <property name="javax.persistence.jdbc.password" value="Smt7$RtvB2"/>
+        <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+        <property name="eclipselink.cache.shared.default" value="false"/>
+		</properties>
+		</persistence-unit>
+		<persistence-unit name="TrasladoDB">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>model.Agenda</class>
+		<class>model.AgendaMail</class>
+		<class>model.AgendaRefresh</class>
+		<class>model.AgendaUsuarioApoya</class>
+		<class>model.Usuario</class>
+	
+			
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+		<properties>
+		<property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://192.168.1.7:1433;databaseName=trans"/>
+        <property name="javax.persistence.jdbc.user" value="usuWEb2s"/>
+        <property name="javax.persistence.jdbc.password" value="Smt7$RtvB2"/>
+        <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+        <property name="eclipselink.cache.shared.default" value="false"/>
+    </properties>
+	</persistence-unit>
+	<persistence-unit name="samtech">
+	<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>model.SamFichaValores</class>	
+		<class>model.SamFicha</class>	
+		<class>model.SamFichaAnexo</class>
+		<class>model.Sam_OT</class>
+		<class>model.SamUsuario</class>
+		<class>model.SamFichaHardware</class>
+		<class>model.SamHardware</class>
+		
+		
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+		<properties>
+		<property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://192.168.1.7:1433;databaseName=samtech"/>
+        <property name="javax.persistence.jdbc.user" value="usuWEb2s"/>
+        <property name="javax.persistence.jdbc.password" value="Smt7$RtvB2"/>
+        <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+        <property name="eclipselink.cache.shared.default" value="false"/>
+		</properties>
+		
+	</persistence-unit>
+	<persistence-unit name="otsamtechDB">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>model.Foto</class>
+		<class>model.Instalacion</class>
+		<class>model.Ot</class>
+		<class>model.ResumenIfo</class>
+		<class>model.Compania</class>
+		<class>model.Log</class>
+		<class>model.TipoValidacion</class>
+		<class>model.Validacion</class>
+		<class>model.Comuna</class>
+		<class>model.Region</class>
+		<class>model.Comprobante</class>
+		<class>model.DetalleComprobante</class>
+		<class>model.FotoFirma</class>
+		<class>model.Periferico</class>
+		<class>model.ModelosPeriferico</class>
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+		<properties>
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://192.168.1.86/otsamtechdb" />
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+			<property name="javax.persistence.jdbc.user" value="postgres" />
+			<property name="javax.persistence.jdbc.password" value="WGsistemas2017" />
+			<property name="eclipselink.ddl-generation" value="create-or-extend-tables" />
+			<property name="eclipselink.cache.shared.default" value="true" />
+			<property name="eclipselink.cache.shared.MyEntity" value="false"/>
+		</properties>
+	</persistence-unit>
+</persistence>
